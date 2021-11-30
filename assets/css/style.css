@@ -1,0 +1,139 @@
+/*common css*/
+
+* {
+    margin:0px; 
+    padding:0px;
+}
+
+body {
+    font-family:"Roboto",sans-serif;
+}
+
+.text-bold {
+    font-weight:bold;
+}
+
+a {text-decoration:none; color:black;}
+
+a:hover {text-decoration:none; color:black; cursor:pointer;}
+
+p{font-weight:400;}
+
+.underline{text-decoration:underline;}
+
+.mt-40 {
+    margin-top:40px;
+}
+
+.mr-15 {
+    margin-right:15px;
+}
+
+.mb-30 {margin-bottom:30px;}
+
+.ml-auto {margin-left:auto;}
+
+.mr-auto {margin-right:auto;}
+
+input { border:2px solid black; border-radius:5px; padding:4px 8px;}
+
+::placeholder { 
+    color: black;
+    opacity: 1; 
+  }
+  
+  :-ms-input-placeholder { 
+    color: black;
+  }
+  
+  ::-ms-input-placeholder { 
+    color: black;
+  }
+
+.block {display:block;}
+
+.button {width: 125px; padding:8px 30px; border:2px solid black; border-radius:10px; color:black}
+
+.button-background {background-color:#66ffff; font-weight:bold}
+
+.centered-box {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 550px;
+    text-align: center;
+    height: 350px;
+}
+
+/* nav tabs */
+
+.nav-item {
+    border: 2px solid black;
+  padding: 0px 0px;
+  border-right:0px;
+  border-radius:5px;
+  background-color:#cccccc;
+  
+  }
+
+  .nav-item a {color:black; width:100%; display:block; text-decoration: none; padding:10px 0px;}
+
+  .nav-item-last {border-right:2px solid black; }
+
+  .active {background-color:white}
+
+  .ml-30 {margin-left:30px;}
+
+  .tab-pane {padding:5px;}
+
+
+
+/*login page css*/
+
+.email-cover{
+    position:relative; right:27px;
+}
+
+.password-cover{
+    position:relative; right:42px;
+}
+
+/*register page*/
+
+.name-cover {
+    position:relative; right:29px;
+}
+
+.confirm-password-cover {
+    position:relative; right:72px;
+}
+
+/*edit page css*/
+
+.edit-name-cover {
+    position:relative;
+    right:45px;
+}
+
+.edit-email-cover {
+    position:relative;
+    right:28px;
+}
+
+/* table css */
+
+.table {
+    border: 2px solid black;
+    border-radius: 5px;
+  }
+
+  .table th {
+    background-color: #cccccc;
+  }
+
+  .table th,
+  table td {
+    border-right: 2px solid black;
+  }

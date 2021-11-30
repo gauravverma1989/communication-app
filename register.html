@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Register page</title>
+  <!-- common CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <div class="centered-box">
+    <form id="registerForm" action="" method="">
+      <h1 class="text-bold ">Register</h1>
+      <div class="mt-40 name-cover">
+        <span class="mr-15 text-bold"><label for="name">Name</label></span>
+        <input id="name" type="text" placeholder="Anne Hunter">
+      </div>
+      <div class="mt-40 email-cover">
+        <span class="mr-15 text-bold"><label for="email">Email</label></span>
+        <input id="email" type="email" placeholder="anne.hunter@mail.com">
+      </div>
+      <div class="mt-40 password-cover">
+        <span class="mr-15 text-bold"><label for="password">Password</label></span>
+        <input id="password" type="password" placeholder="******">
+      </div>
+      <div class="mt-40 confirm-password-cover">
+        <span class="mr-15 text-bold"><label for="confirmpassword">Confirm Password</label></span>
+        <input id="confirmpassword" type="password" placeholder="******">
+      </div>
+      <input onclick="store()" ; id="register_button" type="submit" value="Register"
+        class="mt-40 block ml-auto mr-auto button button-background"></input>
+    </form>
+  </div>
+
+  <!-- common JS -->
+  <script type="text/javascript" src="assets/js/common.js"></script>
+
+</body>
+
+</html>

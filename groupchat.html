@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>User management page</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- common CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- page CSS -->
+  <link rel="stylesheet" href="assets/css/chat.css">
+
+</head>
+
+<body>
+  
+  <ul id="myTabs" class="nav nav-tabs nav-fill mb-3" role="tablist" data-tabs="tabs">
+    <li class=" nav-item"><a class="active" href=" groupchat.html">Group Chat</a></li>
+    <li class="nav-item"><a href="usermgt.html">Manage Users</a></li>
+    <li class="nav-item"><a href="docmgt.html">Manage Documents</a></li>
+    <li class="nav-item nav-item-last"><a href="#logout" data-toggle="tab">Logout</a></li>
+
+  </ul>
+  <div class="tab-content">
+
+    <!-- group chat -->
+    <div role="tabpanel" class="tab-pane fade show in active" id="documents">
+      <div class="chat-cover">
+        <p class="text-center">Group Chat</p>
+        <span class="close-button">
+          <a href=""><img src="img/close.jpg"></a>
+        </span>
+        <div class="chat-inner" id="chat-inner">
+
+        </div>
+        <div class="chat-type-box text-center">
+          <span id="user-name"></span>
+          <input class="chat-type-input" id="user-message" type="text">
+          <a class="chat-send  button" href="#" onclick="sendMessage()">Send</a>
+          <a class="chat-refresh  button" href="#" onclick="fillChat()">refresh</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- common JS -->
+  <script type="text/javascript" src="assets/js/common.js"></script>
+
+  <script>
+    let chats = localStorage.getItem('chats');
+    if (chats) {
+      chats = JSON.parse(chats);
+    } else {
+      chats = [];
+    }
+    let user = getLoggedInUser();
+
+    document.getElementById('user-name').innerHTML = user.name;
+
+    function fillChat() {
+      let chatInner = document.getElementById('chat-inner');
+      chatInner.innerHTML = '';
+      for (let i = 0; i < chats.length; i++) {
+        var row = `<p>[${chats[i].time}] ${chats[i].name} - ${chats[i].message}</p>`
+        chatInner.innerHTML += row;
+      }
+    }
+    fillChat();
+
+    function sendMessage() {
+      let message = document.getElementById('user-message').value;
+      if (message && message.trim()) {
+        chats.push({
+          name: user.name,
+          id: user.id,
+          time: new Date().toLocaleString(),
+          message: message
+        })
+        localStorage.setItem('chats', JSON.stringify(chats));
+        fillChat();
+        document.getElementById('user-message').value = '';
+      }
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+
+  .table td a {
+    color: black;
+  }
+
+  .modal {
+    top: 8rem;
+  }
+
+  .modal-header p {
+    width: 100%;
+    text-align: center;
+  }
+
+  .modal-form {
+    width: 100%;
+    text-align: center;
+  }
+
+  .modal-header {
+    border-bottom: 1px solid black;
+    padding: 0.5rem 0.5rem;
+  }
+
+  .file-upload {
+    position: relative;
+    right: 58px;
+  }
+
+  .button {
+    background-color: #cccccc;
+  }
+
+  .upload-cancel-cover {
+    margin-top: 55px;
+    padding-left: 2.5rem;
+  }
+
+  .upload-cancel-cover a {
+    padding: 8px 10px;
+  }
+
+  .upload-cancel-cover .cancel {
+    margin-left: 1.5rem;
+  }
+
+  .save-cancel-cover {
+    margin-top: 55px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    left: 4rem;
+  }
+
+  .save-cancel-cover .cancel {
+    margin-left: 1.5rem;
+  }
+
+  .modal-body {
+    padding-bottom: 3rem;
+  }

@@ -1,0 +1,36 @@
+
+.chat-cover {
+    border: 2px solid black;
+    width: 100%;
+    border-radius: 5px;
+    padding: 1rem 0rem;
+    position: relative;
+  }
+
+  .chat-inner {
+    min-height: 300px;
+    border: 2px solid black;
+    width: 100%;
+    border-radius: 5px;
+    padding: 25px 15px;
+    margin-bottom: 15px;
+  }
+
+  .chat-inner p {
+    margin-bottom: 0px;
+  }
+
+  .chat-type-input {
+    min-width: 50%;
+    margin: 0px 15px;
+  }
+
+  .close-button img {
+    max-width: 20px;
+  }
+
+  .close-button {
+    position: absolute;
+    right: 3px;
+    top: 2px;
+  }

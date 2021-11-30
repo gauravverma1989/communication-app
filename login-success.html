@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Login success page</title>
+  <!-- common CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <div class="centered-box">
+    <h1 class="text-bold ">Login Successful</h1>
+    <p class="mt-40"><span class="text-bold ">Welcome ! </span><span id="loginEmail"></span> </p>
+    <p class="mt-40"><a href="usermgt.html">Dashboard</a></p>
+  </div>
+
+  <!-- common JS -->
+  <script type="text/javascript" src="assets/js/common.js"></script>
+
+  <!-- Page JS -->
+  <script>
+    var loginEmail = localStorage.getItem('loggedInEmail')
+    document.getElementById('loginEmail').innerHTML = loginEmail;
+  </script>
+
+</body>
+
+</html>
